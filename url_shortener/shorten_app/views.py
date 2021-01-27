@@ -7,13 +7,21 @@ from .forms import EnterUrlForm
 from .models import Url
 
 
-def redirect(request, url):
-    current_obj = Url.objects.filter(short_url=url)
-    if len(current_obj) == 0:
-        return render(request, 'Error here')
-    context = {'obj':current_obj[0]}
-    return render(request, 'redirect.html', context)
+# def redirect(request, url):
+#     current_obj = Url.objects.filter(short_url=url)
+#     if len(current_obj) == 0:
+#         return render(request, 'Error here')
+#     context = {'obj':current_obj[0]}
+#     return render(request, 'shorten_app/redirect.html', context)
 
+def shortpage(request):
+    request.form()
+    current_obj = Url.objects.filter(shorten)
+    return redirect(current_obj.shorten)
+
+''' def redirect(request, token):
+    long_url = short_urls.objects.filter(short_url=tocken)[0]
+    return redirect(long_url.long_url)'''
 
 def enter(request):
     if request.method == 'POST':
@@ -29,7 +37,9 @@ def enter(request):
                     random_chars += random.choice(random_chars_list)
             s = Url(original_url=original_website, shorten=random_chars)
             s.save()
+            # redirect(request, shorten)
             return render(request, 'shorten_app/newUrl.html', {'chars':random_chars})
+            # return redirect("url-short", url_id=url_id)
     
     else:
         form = EnterUrlForm()
