@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>URL Shortener</title>
 </head>
 <body>
@@ -11,8 +13,9 @@
         {% block content %}
         {% endblock content %}
     </main>
+
     <footer>
-        <p>Created by Steph and Paola | Futureproof Weiland cohort 2021</p>
+        <p>Created by Steph and Paola | Futureproof Weiland Cohort 2021</p>
     </footer>
 </body>
 </html>
