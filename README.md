@@ -2,6 +2,8 @@
 
 Let’s face it, most developers are a bit lazy. One thing that can be really laborious is typing in very long URL’s. Let's solve that problem with a URL Shortener!
 
+![alt text](demopic.png)
+
 ### Installation & Usage
 - Clone this repository and `cd` into it
 - Install requirements by running `pipenv install -r requirements.txt`
