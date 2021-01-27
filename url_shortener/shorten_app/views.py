@@ -15,6 +15,12 @@ def redirect(request, url):
     return render(request, 'redirect.html', context)
 
 
+# def shortpage(request):
+#     request.form()
+#     current_obj = Url.objects.filter(shorten)
+#     return redirect(current_obj.shorten)
+
+
 def enter(request):
     if request.method == 'POST':
         form = EnterUrlForm(request.POST)
