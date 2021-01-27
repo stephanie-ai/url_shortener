@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import *
-app_name = "url"
+# from .views import *
 from . import views
+from .views import enter, redirect
 
 urlpatterns = [
-    path('', homepage, name='homepage'),
-    path("url", urlShort, name="homepage")
-    # path("u/<str:slugs>", views.urlRedirect, name="redirect")
+    path("", enter, name='url-homepage'),
+    # path("short/", redirect, name="url-show"),
+    path("short/", redirect, name='redirect')
 ]
+
