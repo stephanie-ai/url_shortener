@@ -1,0 +1,9 @@
+{% extends "shorten_app/home.html" %}
+
+{% block content %}
+    <div id="newUrlDiv">
+        <h3>Your New Shortened URL:</h3>
+
+        <p id="result"><a href="{% url 'redirect' %}"></a>www.short/io/{{ chars }}</a></p>
+    </div>
+{% endblock content %}
