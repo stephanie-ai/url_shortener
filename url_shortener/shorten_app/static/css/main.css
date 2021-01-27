@@ -39,16 +39,16 @@ h1 {
 
 #result {
     padding: 30px;
-    color: black;
+    color: blue;
+    text-decoration: underline;
     background-color: white;
     border-radius: 8px;
     font-weight: bold;
 }
 
-/* a {
-    color: blue;
-} */
-
+#another {
+    text-decoration: none;
+}
 
 footer { 
     position: fixed; 
