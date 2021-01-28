@@ -1,0 +1,10 @@
+{% extends "shorten_app/home.html" %}
+
+{% block content %}
+<form method="POST" id="enter_url">
+   {% csrf_token %} 
+   {{ form.as_table }}
+   <br>
+   <input type="submit" value="Submit" class="submit_btn"> 
+</form>
+{% endblock content %}
